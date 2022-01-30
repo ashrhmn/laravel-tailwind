@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PhotosController;
 use App\Http\Controllers\StudentController;
 
 /*
@@ -23,8 +24,10 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/login', [PagesController::class, 'login']);
+Route::get('/login', [PagesController::class, 'login'])->name("login");
 
 Route::get("/student/create", [StudentController::class, 'create']);
 Route::get("/student", [StudentController::class, 'get']);
 Route::get("/student/edit", [StudentController::class, 'edit']);
+
+Route::resource('photos', PhotosController::class);
