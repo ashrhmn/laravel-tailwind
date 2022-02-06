@@ -11,4 +11,14 @@ class PagesController extends Controller
     {
         return view('home.login');
     }
+    public function submitLogin(Request $req)
+    {
+        $req->validate(
+            [
+                'username' => 'required|min:5',
+                'password' => 'required',
+            ]
+        );
+        return $req;
+    }
 }

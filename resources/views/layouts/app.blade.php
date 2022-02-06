@@ -10,7 +10,7 @@
 
 <body>
     <nav>
-        <a href="/{{ route('login') }}">Login</a>
+        <a href="{{ route('login') }}">Login</a>
         <a href="/register">Register</a>
         <a href="/student/create">Create Student</a>
         <a href="/student">Get Student</a>

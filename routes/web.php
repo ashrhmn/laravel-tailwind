@@ -31,3 +31,5 @@ Route::get("/student", [StudentController::class, 'get']);
 Route::get("/student/edit", [StudentController::class, 'edit']);
 
 Route::resource('photos', PhotosController::class);
+
+Route::post('/login', [PagesController::class, 'submitLogin'])->name("login");
